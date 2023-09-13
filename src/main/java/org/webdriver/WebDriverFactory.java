@@ -1,12 +1,12 @@
-package webdriver;
+package org.webdriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.webdriver.WebDriverType;
 
-import static webdriver.WebDriverType.CHROME_DRIVER;
-import static webdriver.WebDriverType.FIREFOX_DRIVER;
+import org.webdriver.WebDriverType.*;
 
 public class WebDriverFactory {
     public static WebDriver getDriver(WebDriverType webDriverType) {
