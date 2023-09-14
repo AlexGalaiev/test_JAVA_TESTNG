@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BasePage {
     public WebDriver driver;
 
@@ -15,6 +18,13 @@ public class BasePage {
     public WebElement findByLocator(String cssLocator){
         return driver.findElement(By.cssSelector(cssLocator));
     }
-    public void comparisonValues(List<WebElement> valuesForComparison, WebElement list)
+    public List<String> getStringFromWebElement(List<WebElement> elementsList) {
+        List<String> listOfStrings = new ArrayList<>();
+        for (WebElement element : elementsList) {
+            listOfStrings.add(element.getText().toLowerCase());
+        }
+        System.out.print(listOfStrings);
+        return listOfStrings;
+    }
 
 }

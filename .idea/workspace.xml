@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34a993d8-cfa3-4f10-b470-cc5f7b5bf38a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/constants/Locators.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/CheckBoxsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/ElementsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/MainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/base/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/CheckBoxTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ElementsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="34a993d8-cfa3-4f10-b470-cc5f7b5bf38a" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/webdriver/WebDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/webdriver/WebDriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/webdriver/WebDriverType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/webdriver/WebDriverType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/CheckBoxsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/CheckBoxsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CheckBoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckBoxTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +46,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.ElementsTest.TestElements">
+  <component name="RunManager" selected="TestNG.CheckBoxTest.oneCheckboxTest">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -64,6 +54,42 @@
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckBoxTest.checkboxTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="test_JAVA_TESTNG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CheckBoxTest" />
+      <option name="METHOD_NAME" value="checkboxTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckBoxTest.oneCheckboxTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="test_JAVA_TESTNG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CheckBoxTest" />
+      <option name="METHOD_NAME" value="oneCheckboxTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,6 +141,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CheckBoxTest.oneCheckboxTest" />
+        <item itemvalue="TestNG.CheckBoxTest.checkboxTest" />
         <item itemvalue="TestNG.ElementsTest.TestElements" />
         <item itemvalue="TestNG.ElementsTest" />
       </list>
@@ -129,6 +157,19 @@
       <option name="presentableId" value="Default" />
       <updated>1694095274728</updated>
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <option name="closed" value="true" />
+      <created>1694588223031</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694588223031</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
 </project>
