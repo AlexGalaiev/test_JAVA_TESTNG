@@ -17,7 +17,6 @@ public class CheckBoxsPage extends BasePage {
     public List<WebElement> selectedPoints;
     @FindBy(css = ".rct-option-expand-all")
     private WebElement plusBtn;
-
     @FindBys({@FindBy(css = ".rct-title")})
     private List<WebElement> pointNameInFoldersTree;
     @FindBy(css = "[for='tree-node-home']")
@@ -26,8 +25,13 @@ public class CheckBoxsPage extends BasePage {
     private List<WebElement> dropdownArrowClosed;
     @FindBy(xpath = "//*[contains(text(),'Desktop')]")
     private WebElement nameDesktopPoint;
-    @FindBy(css = ".rct-node-leaf")
+    @FindAll({
+            @FindBy(css = "[for='tree-node-desktop']"),
+            @FindBy(css = ".rct-node-leaf")
+    })
     private List<WebElement> selectedCategoriesSecondGroup;
+    @FindBy(css = ".rct-icon-check")
+    private List<WebElement> checkedCheckbox;
 
     public CheckBoxsPage openMenuAndFillAllCheckboxes() {
         plusBtn.click();
@@ -50,5 +54,9 @@ public class CheckBoxsPage extends BasePage {
     public CheckBoxsPage clickDescktopPoint(){
         nameDesktopPoint.click();
         return new CheckBoxsPage(driver);
+    }
+    public List<String> checkedBoxes(){
+        return getStringFromWebElement(checkedCheckbox);
+
     }
 }

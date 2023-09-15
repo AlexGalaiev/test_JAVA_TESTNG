@@ -14,6 +14,8 @@ public class CheckBoxTest extends BaseTest {
 
    @AfterMethod
    public void afterMethod(){driver.quit();}
+
+   //this test won't work because of incorrect values
    @Test
    public void checkboxTest(){
       CheckBoxsPage checkBoxsPage = new CheckBoxsPage(driver);
@@ -29,7 +31,7 @@ public class CheckBoxTest extends BaseTest {
       checkBoxsPage.clickDropDownArrow()
               .clickDescktopPoint()
               .clickDropDownArrow();
-      Assert.assertTrue(checkBoxsPage.getSelectedPointsList().containsAll(checkBoxsPage.getSelectedCategoriesSecondGroup()));
+      Assert.assertEquals(checkBoxsPage.getSelectedCategoriesSecondGroup(), checkBoxsPage.getSelectedPointsList());
    }
 
 

@@ -1,7 +1,6 @@
 package org.pageobjects;
 
 import org.constants.ApplicationConstants;
-import org.constants.Locators;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
