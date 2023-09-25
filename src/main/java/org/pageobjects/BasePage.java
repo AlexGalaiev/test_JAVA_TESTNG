@@ -25,16 +25,16 @@ public class BasePage {
         }
         return listOfStrings;
     }
-    public void clickGroupOfElements(List<WebElement> elementsList) {
-        for (WebElement element : elementsList) {
-            element.click();
-        }
-    }
+
     public void waitElement(By elementLocatorToWait) {
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(elementLocatorToWait));
     }
     public void sendKeysElement(String locator, String text){driver.findElement(By.cssSelector(locator)).sendKeys(text);}
-    public void clickElementByCSS(String locator){driver.findElement(By.cssSelector(locator)).click();}
-    public void clickElementByXPATH(String locator) {driver.findElement(By.xpath(locator)).click();}
+    public void clickElementByCSS(String locator) {driver.findElement(By.cssSelector(locator)).click();}
+    public void clearElementField(String locator) {driver.findElement(By.cssSelector(locator)).clear();}
+    public WebElement searchByXpathInsideElement(WebElement elementToSearch, String locator) {
+        return elementToSearch.findElement(By.xpath(locator));
+    }
+
 }

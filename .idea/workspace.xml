@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34a993d8-cfa3-4f10-b470-cc5f7b5bf38a" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/RadioBtnPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/WebTablePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/RadioBtnTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/WebTablesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/constants/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationLocators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/CheckBoxsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/CheckBoxsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/ElementsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/ElementsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CheckBoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckBoxTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/WebTablePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/WebTablePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/WebTablesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/WebTablesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +27,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AlexGalaiev&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ecdec1b5-c2fe-486a-b3f8-7d89afef5878" />
+        <option name="url" value="https://github.com/AlexGalaiev/test_JAVA_TESTNG.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -43,17 +50,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.scopes"
   }
-}</component>
-  <component name="RunManager" selected="TestNG.WebTablesTest.WebTablesTest">
+}]]></component>
+  <component name="RunManager" selected="TestNG.WebTablesTest.editWebTableBtnTest">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -61,70 +70,6 @@
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CheckBoxTest.checkboxTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="test_JAVA_TESTNG" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CheckBoxTest" />
-      <option name="METHOD_NAME" value="checkboxTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CheckBoxTest.oneCheckboxTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="test_JAVA_TESTNG" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CheckBoxTest" />
-      <option name="METHOD_NAME" value="oneCheckboxTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ElementsTest.TestElements" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="test_JAVA_TESTNG" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ElementsTest" />
-      <option name="METHOD_NAME" value="TestElements" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -141,6 +86,23 @@
       <option name="MAIN_CLASS_NAME" value="tests.RadioBtnTest" />
       <option name="METHOD_NAME" value="RadiobtnTest" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebTablesTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="test_JAVA_TESTNG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.WebTablesTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -165,13 +127,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebTablesTest.addingTableTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="test_JAVA_TESTNG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.WebTablesTest" />
+      <option name="METHOD_NAME" value="addingTableTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebTablesTest.editWebTableBtnTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="test_JAVA_TESTNG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.WebTablesTest" />
+      <option name="METHOD_NAME" value="editWebTableBtnTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.WebTablesTest.editWebTableBtnTest" />
+        <item itemvalue="TestNG.WebTablesTest.addingTableTest" />
         <item itemvalue="TestNG.WebTablesTest.WebTablesTest" />
+        <item itemvalue="TestNG.WebTablesTest" />
         <item itemvalue="TestNG.RadioBtnTest.RadiobtnTest" />
-        <item itemvalue="TestNG.CheckBoxTest.oneCheckboxTest" />
-        <item itemvalue="TestNG.CheckBoxTest.checkboxTest" />
-        <item itemvalue="TestNG.ElementsTest.TestElements" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694700705273</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1">
+      <option name="closed" value="true" />
+      <created>1694791593872</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694791593872</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
