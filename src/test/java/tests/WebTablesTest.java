@@ -20,7 +20,7 @@ public class WebTablesTest extends BaseTest {
     public void addBtnTest(){
         WebTablePage webTablePage = new WebTablePage(driver);
         webTablePage.closeExistFields()
-                .fillRegistrationFormForDifferentNumberOfUsers(1);
+                .createUserInBase(1);
         Assert.assertTrue(webTablePage.deleteFiledBtns.size()>0);
     }
 
@@ -28,18 +28,17 @@ public class WebTablesTest extends BaseTest {
     public void editWebTableBtnTest(){
         WebTablePage webTablePage = new WebTablePage(driver);
         webTablePage.closeExistFields()
-                .fillRegistrationFormForDifferentNumberOfUsers(1)
+                .createUserInBase(1)
                 .editEmailFieldInWebTable();
-        Assert.assertEquals(ApplicationConstants.TEST_EMAIL, webTablePage.getUsersEmailFromWebTable(3));
+        Assert.assertEquals(ApplicationConstants.TEST_EMAIL, webTablePage.getUserCredentialsFromWebList(3));
 
     }
     @Test
     public void searchBtnTest() {
         WebTablePage webTablePage = new WebTablePage(driver);
         webTablePage.closeExistFields()
-                .fillRegistrationFormForDifferentNumberOfUsers(3);
-
-
-
+                .createUserInBase(4)
+                .useSearchField(webTablePage.getUserCredentialsFromWebList(4));
+        Assert.assertTrue(webTablePage.сheckElementInWebTable(webTablePage.getUserCredentialsFromWebList(4)));
     }
 }

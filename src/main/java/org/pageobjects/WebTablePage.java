@@ -35,7 +35,7 @@ public class WebTablePage extends BasePage{
     private WebElement singleWebTable;
 
     private By RegistrationForm = By.cssSelector(ApplicationLocators.REG_FORM);
-
+    //------------------------------------------------------------------------------------
     private Map<String, String> generateRandomPerson(){
         Map<String, String> randomPerson = new HashMap<String, String>();
 
@@ -67,39 +67,7 @@ public class WebTablePage extends BasePage{
         }
         clickElementByCSS(ApplicationLocators.REG_FORM_SUBMIT);
     }
-    public WebTablePage fillRegistrationFormForDifferentNumberOfUsers(Integer numberOfUsers) {
-        for(int i=1; i<=numberOfUsers; i++) {
-            clickElementByCSS(ApplicationLocators.ADD_BTN);
-            waitElement(RegistrationForm);
-            fillRegistrationForm();
-        }
-        return new WebTablePage(driver);
-    }
-    public WebTablePage closeExistFields() {
-        System.out.println(deleteFiledBtns.size());
-        clickGroupOfElements(deleteFiledBtns);
-        waitElement(noDataText);
-        return new WebTablePage(driver);
-    }
-    public WebTablePage editEmailFieldInWebTable() {
-        singleEditBtn.click();
-        clearElementField(ApplicationLocators.REG_FORM_EMAIL);
-        sendKeysElement(ApplicationLocators.REG_FORM_EMAIL, ApplicationConstants.TEST_EMAIL);
-        clickElementByCSS(ApplicationLocators.REG_FORM_SUBMIT);
-        return new WebTablePage(driver);
-    }
-    public String getUsersEmailFromWebTable(Integer index){
-        return searchElementlInWebTable(index);
-    }
-    public String searchElementlInWebTable(Integer index){
-        List<WebElement> tableListOfdata = webTableFields.findElements(By.cssSelector(".rt-td"));
-        List<String> tableOfStrings = new ArrayList<>();
-        for(WebElement element: tableListOfdata){
-            tableOfStrings.add(element.getText());
-        }
-        return tableOfStrings.get(index);
-    }
-    public boolean searchElementField(String elementToSearch){
+    public boolean сheckElementInWebTable(String elementToSearch){
         List<WebElement> tableListOfdata = webTableFields.findElements(By.cssSelector(".rt-td"));
         List<String> tableOfStrings = new ArrayList<>();
         for(WebElement element: tableListOfdata){
@@ -114,5 +82,44 @@ public class WebTablePage extends BasePage{
         }
         return foundELementOnWebTables;
     }
+
+
+    //--------------------------------------------------------------------------------------
+    public WebTablePage createUserInBase(Integer numberOfUsers) {
+        for(int i=1; i<=numberOfUsers; i++) {
+            clickElementByCSS(ApplicationLocators.ADD_BTN);
+            waitElement(RegistrationForm);
+            fillRegistrationForm();
+        }
+        return new WebTablePage(driver);
+    }
+
+    public WebTablePage closeExistFields() {
+        clickGroupOfElements(deleteFiledBtns);
+        waitElement(noDataText);
+        return new WebTablePage(driver);
+    }
+    public WebTablePage editEmailFieldInWebTable() {
+        singleEditBtn.click();
+        clearElementField(ApplicationLocators.REG_FORM_EMAIL);
+        sendKeysElement(ApplicationLocators.REG_FORM_EMAIL, ApplicationConstants.TEST_EMAIL);
+        clickElementByCSS(ApplicationLocators.REG_FORM_SUBMIT);
+        return new WebTablePage(driver);
+    }
+    public String getUserCredentialsFromWebList(Integer index){
+        List<WebElement> tableListOfdata = webTableFields.findElements(By.cssSelector(".rt-td"));
+        List<String> tableOfStrings = new ArrayList<>();
+        for(WebElement element: tableListOfdata){
+            tableOfStrings.add(element.getText());
+        }
+        return tableOfStrings.get(index);
+    }
+
+    public WebTablePage useSearchField(String searchText) {
+        searchBoxFiels.clear();
+        searchBoxFiels.sendKeys(searchText);
+        return new WebTablePage(driver);
+    };
+
 }
 
