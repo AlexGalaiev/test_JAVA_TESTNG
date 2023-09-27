@@ -17,11 +17,10 @@ public class WebTablesTest extends BaseTest {
     public void afterMethod() {driver.quit();}
 
     @Test
-    public void addingTableTest(){
+    public void addBtnTest(){
         WebTablePage webTablePage = new WebTablePage(driver);
         webTablePage.closeExistFields()
-                .addPointTofield()
-                .fillRegForm();
+                .fillRegistrationFormForDifferentNumberOfUsers(1);
         Assert.assertTrue(webTablePage.deleteFiledBtns.size()>0);
     }
 
@@ -29,10 +28,18 @@ public class WebTablesTest extends BaseTest {
     public void editWebTableBtnTest(){
         WebTablePage webTablePage = new WebTablePage(driver);
         webTablePage.closeExistFields()
-                .addPointTofield()
-                .fillRegForm()
+                .fillRegistrationFormForDifferentNumberOfUsers(1)
                 .editEmailFieldInWebTable();
-        Assert.assertEquals(ApplicationConstants.TEST_EMAIL, webTablePage.searchEmailInWebTable());
+        Assert.assertEquals(ApplicationConstants.TEST_EMAIL, webTablePage.getUsersEmailFromWebTable(3));
 
     }
- }
+    @Test
+    public void searchBtnTest() {
+        WebTablePage webTablePage = new WebTablePage(driver);
+        webTablePage.closeExistFields()
+                .fillRegistrationFormForDifferentNumberOfUsers(3);
+
+
+
+    }
+}

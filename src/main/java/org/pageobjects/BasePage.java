@@ -18,7 +18,7 @@ public class BasePage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    public List<String> getStringFromWebElement(List<WebElement> elementsList) {
+    protected List<String> getStringFromWebElement(List<WebElement> elementsList) {
         List<String> listOfStrings = new ArrayList<>();
         for (WebElement element : elementsList) {
             listOfStrings.add(element.getText().toLowerCase());
@@ -26,14 +26,16 @@ public class BasePage {
         return listOfStrings;
     }
 
-    public void waitElement(By elementLocatorToWait) {
+    protected void waitElement(By elementLocatorToWait) {
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(elementLocatorToWait));
     }
-    public void sendKeysElement(String locator, String text){driver.findElement(By.cssSelector(locator)).sendKeys(text);}
-    public void clickElementByCSS(String locator) {driver.findElement(By.cssSelector(locator)).click();}
-    public void clearElementField(String locator) {driver.findElement(By.cssSelector(locator)).clear();}
-    public WebElement searchByXpathInsideElement(WebElement elementToSearch, String locator) {
+    protected void sendKeysElement(String locator, String text){
+        driver.findElement(By.cssSelector(locator)).clear();
+        driver.findElement(By.cssSelector(locator)).sendKeys(text);}
+    protected void clickElementByCSS(String locator) {driver.findElement(By.cssSelector(locator)).click();}
+    protected void clearElementField(String locator) {driver.findElement(By.cssSelector(locator)).clear();}
+    protected WebElement searchByXpathInsideElement(WebElement elementToSearch, String locator) {
         return elementToSearch.findElement(By.xpath(locator));
     }
 
