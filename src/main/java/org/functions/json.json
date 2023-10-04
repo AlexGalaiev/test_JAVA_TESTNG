@@ -1,0 +1,23 @@
+{
+  "#created": [
+    "201", "Created"
+  ],
+  "#no-content":[
+    "204", "No Content"
+  ],
+  "#moved":[
+    "301", "Moved Permanently"
+  ],
+  "#bad-request":[
+    "400", "Bad Request"
+  ],
+  "#unauthorized":[
+    "401", "Unauthorized"
+  ],
+  "#forbidden":[
+    "403", "Forbidden"
+  ],
+  "#invalid-url":[
+    "404", "Not Found"
+  ]
+}

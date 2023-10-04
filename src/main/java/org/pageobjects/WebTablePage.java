@@ -1,13 +1,18 @@
 package org.pageobjects;
 
 import net.datafaker.Faker;
+import net.datafaker.providers.base.Bool;
 import org.constants.ApplicationConstants;
 import org.constants.ApplicationLocators;
+import org.functions.RandomUser;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Sleeper;
 
 import java.util.*;
 
@@ -16,8 +21,7 @@ public class WebTablePage extends BasePage{
     public WebTablePage(WebDriver driver) {
         super(driver);
     }
-    Faker faker = new Faker();
-    Random random = new Random();
+
     private By noDataText = By.cssSelector(".rt-noData");
     @FindAll({@FindBy(xpath = "//*[contains(@id, 'delete-record')]")})
     public List<WebElement> deleteFiledBtns;
@@ -33,21 +37,15 @@ public class WebTablePage extends BasePage{
     private WebElement webTableFields;
     @FindBy(css = ".rt-td")
     private WebElement singleWebTable;
+    @FindBy(css = ".-pageSizeOptions")
+    private WebElement sizeDropDown;
+    @FindBy(css = ".-totalPages")
+    private WebElement totalPages;
+    @FindBy(css = ".-next")
+    private WebElement nextBtn;
 
     private By RegistrationForm = By.cssSelector(ApplicationLocators.REG_FORM);
     //------------------------------------------------------------------------------------
-    private Map<String, String> generateRandomPerson(){
-        Map<String, String> randomPerson = new HashMap<String, String>();
-
-        randomPerson.put("firstName", faker.name().firstName());
-        randomPerson.put("lastName", faker.name().lastName());
-        randomPerson.put("userEmail", faker.name().firstName().toString()+faker.name().lastName().toString()+"@i.com");
-        randomPerson.put("age", String.valueOf(random.nextInt(90)));
-        randomPerson.put("salary", String.valueOf(random.nextInt(10000)));
-        randomPerson.put("department", String.valueOf(faker.funnyName().name()));
-
-        return randomPerson;
-    }
 
     private void clickGroupOfElements(List<WebElement> elementsList) {
         List<String> deleteBtnsList = new ArrayList<String>();
@@ -60,7 +58,8 @@ public class WebTablePage extends BasePage{
     }
     private void fillRegistrationForm() {
         waitElement(RegistrationForm);
-        for(Map.Entry<String, String> mapElement : generateRandomPerson().entrySet()) {
+        RandomUser user = new RandomUser();
+        for(Map.Entry<String, String> mapElement : user.generateRandomPerson().entrySet()) {
             String key = mapElement.getKey();
             String value = mapElement.getValue();
             sendKeysElement("#"+key, value);
@@ -91,20 +90,20 @@ public class WebTablePage extends BasePage{
             waitElement(RegistrationForm);
             fillRegistrationForm();
         }
-        return new WebTablePage(driver);
+        return this;
     }
 
     public WebTablePage closeExistFields() {
         clickGroupOfElements(deleteFiledBtns);
         waitElement(noDataText);
-        return new WebTablePage(driver);
+        return this;
     }
     public WebTablePage editEmailFieldInWebTable() {
         singleEditBtn.click();
         clearElementField(ApplicationLocators.REG_FORM_EMAIL);
         sendKeysElement(ApplicationLocators.REG_FORM_EMAIL, ApplicationConstants.TEST_EMAIL);
         clickElementByCSS(ApplicationLocators.REG_FORM_SUBMIT);
-        return new WebTablePage(driver);
+        return this;
     }
     public String getUserCredentialsFromWebList(Integer index){
         List<WebElement> tableListOfdata = webTableFields.findElements(By.cssSelector(".rt-td"));
@@ -118,8 +117,25 @@ public class WebTablePage extends BasePage{
     public WebTablePage useSearchField(String searchText) {
         searchBoxFiels.clear();
         searchBoxFiels.sendKeys(searchText);
-        return new WebTablePage(driver);
+        return this;
     };
-
+    public WebTablePage changeSizeOfDropDown() throws InterruptedException {
+        Actions actions = new Actions(driver);
+        Thread.sleep(2000);
+        actions.keyDown(sizeDropDown, Keys.ARROW_DOWN).keyDown(sizeDropDown, Keys.ARROW_DOWN).perform();
+        sizeDropDown.click();
+        searchByXpathInsideElement(sizeDropDown, "//option[contains(text(), 5)][1]").click();
+        return this;
+    }
+    public boolean checkNumberOfPages(String expectedNumberOfPages){
+        String numberOfTotalPagesDisplayed = totalPages.getText();
+        return numberOfTotalPagesDisplayed.equals(expectedNumberOfPages);
+    }
+    public boolean checkBtnNextIsActive(){
+        Boolean nextBtnActive = false;
+        if (nextBtn.getAttribute("disabled").equals("null")){
+            nextBtnActive = true;
+        }return nextBtnActive;
+    }
 }
 

@@ -41,4 +41,12 @@ public class WebTablesTest extends BaseTest {
                 .useSearchField(webTablePage.getUserCredentialsFromWebList(4));
         Assert.assertTrue(webTablePage.сheckElementInWebTable(webTablePage.getUserCredentialsFromWebList(4)));
     }
+
+    @Test
+    public void checFooterTableTest() throws InterruptedException {
+        WebTablePage webTablePage = new WebTablePage(driver);
+        webTablePage.changeSizeOfDropDown()
+                .createUserInBase(4);
+        Assert.assertTrue(webTablePage.checkNumberOfPages("2"));
+    }
 }
