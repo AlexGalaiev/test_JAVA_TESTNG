@@ -1,20 +1,15 @@
 package tests;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import net.lightbody.bmp.core.har.Har;
-import net.lightbody.bmp.core.har.HarEntry;
-import org.base.BaseTest;
 import org.base.BaseTestApi;
 import org.constants.ApplicationConstants;
-import org.openqa.selenium.By;
+import org.functions.ApiMethos;
+import org.pageobjects.LinksPage;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 public class LinksTest extends BaseTestApi{
     @BeforeMethod
@@ -27,18 +22,30 @@ public class LinksTest extends BaseTestApi{
         driver.quit();
     }
     @Test
-    public void codeApiTest() throws IOException, InterruptedException {
-        bmp.newHar();
-        driver.findElement(By.cssSelector("#created")).click();
-        Har har = bmp.endHar();
-        List<HarEntry> entries = har.getLog().getEntries();
-        for(HarEntry entry: entries){
-            System.out.println(entry.getRequest().getUrl());
-            System.out.println(entry.getResponse().getStatus());
-            System.out.println(entry.getResponse().getStatusText());
-        }
-
-
+    public void codeApiTestCreatedLink() throws IOException {
+        LinksPage linkPage = new LinksPage(driver);
+        Assert.assertTrue(linkPage.checkCodeInReqest(
+                new ApiMethos().getExpectedListOfResponse(linkPage.createdLinkLocator).get(0),
+                linkPage.getExpectedApiCalls(bmp, linkPage.createdLinkLocator)));
+        Assert.assertEquals(linkPage.linkResponse.getText(),
+                new ApiMethos().getSuccessMSGAfterRedirect(linkPage.createdLinkLocator));
     }
-
+    @Test
+    public void codeApiTestNoContentLink() throws IOException {
+        LinksPage linkPage = new LinksPage(driver);
+        Assert.assertTrue(linkPage.checkCodeInReqest(
+                new ApiMethos().getExpectedListOfResponse(linkPage.noContentApiLink).get(0),
+                linkPage.getExpectedApiCalls(bmp, linkPage.noContentApiLink)));
+        Assert.assertEquals(linkPage.linkResponse.getText(),
+                new ApiMethos().getSuccessMSGAfterRedirect(linkPage.noContentApiLink));
+    }
+    @Test
+    public void codeApiTestMoveApiLink() throws IOException {
+        LinksPage linkPage = new LinksPage(driver);
+        Assert.assertTrue(linkPage.checkCodeInReqest(
+                new ApiMethos().getExpectedListOfResponse(linkPage.moveApiLink).get(0),
+                linkPage.getExpectedApiCalls(bmp, linkPage.createdLinkLocator)));
+        Assert.assertEquals(linkPage.linkResponse.getText(),
+                new ApiMethos().getSuccessMSGAfterRedirect(linkPage.createdLinkLocator));
+    }
 }

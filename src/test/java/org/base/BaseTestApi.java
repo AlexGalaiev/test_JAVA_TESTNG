@@ -13,14 +13,15 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 public class BaseTestApi {
-    public static BrowserMobProxy bmp;
-    public static WebDriver driver;
+    public BrowserMobProxy bmp;
+    public WebDriver driver;
 
     @BeforeSuite
     public void installProxyServer(){
         bmp = new BrowserMobProxyServer();
         bmp.setTrustAllServers(true);
-        bmp.setHarCaptureTypes(CaptureType.getRequestCaptureTypes());
+        bmp.setHarCaptureTypes(CaptureType.getAllContentCaptureTypes());
+        bmp.setHarCaptureTypes(CaptureType.getResponseCaptureTypes());
         bmp.start(0);
         Proxy seleniumProxy = ClientUtil.createSeleniumProxy(bmp);
         WebDriverManager.firefoxdriver().setup();

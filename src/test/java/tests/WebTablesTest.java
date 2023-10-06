@@ -43,7 +43,7 @@ public class WebTablesTest extends BaseTest {
     }
 
     @Test
-    public void checFooterTableTest() throws InterruptedException {
+    public void checkFooterTableTest() throws InterruptedException {
         WebTablePage webTablePage = new WebTablePage(driver);
         webTablePage.changeSizeOfDropDown()
                 .createUserInBase(4);
