@@ -2,6 +2,9 @@ package org.pageobjects;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import de.sstoehr.harreader.HarReader;
+import de.sstoehr.harreader.HarReaderException;
+import de.sstoehr.harreader.HarReaderMode;
 import net.lightbody.bmp.BrowserMobProxy;
 import net.lightbody.bmp.core.har.Har;
 import net.lightbody.bmp.core.har.HarEntry;
@@ -44,21 +47,35 @@ public class LinksPage extends BasePage {
     @FindBy(css = "#linkResponse")
     public WebElement linkResponse;
 
-    public List<String> getExpectedApiCalls(BrowserMobProxy bmp, String locatorOfClickElement) {
+    public Map<String, List<String>> getExpectedApiCalls(BrowserMobProxy bmp, String locatorOfClickElement) throws IOException, HarReaderException {
         bmp.newHar();
         driver.findElement(By.cssSelector(locatorOfClickElement)).click();
-        Har har = bmp.endHar();
-        List<String> apiCallsResult = new ArrayList<>();
-        List<HarEntry> entries = har.getLog().getEntries();
-        for(HarEntry entry: entries){
-            apiCallsResult.add(entry.getRequest().getUrl().toString());
-            apiCallsResult.add(String.valueOf(entry.getResponse().getStatus()));
-            apiCallsResult.add(entry.getResponse().getStatusText().toString());
+        Har harreaded = bmp.endHar();
+        harreaded.writeTo(new File("src/main/java/org/har/file.har"));
+        HarReader harReader = new HarReader();
+        de.sstoehr.harreader.model.Har har=  harReader.readFromFile(new File("src/main/java/org/har/file.har"), HarReaderMode.LAX);
+
+        Map<String,List<String>> apiCallsResult = new HashMap<>();
+
+
+        for(de.sstoehr.harreader.model.HarEntry entry: har.getLog().getEntries()){
+            List<String> cashList = new ArrayList<>();
+            cashList.add(String.valueOf(entry.getResponse().getStatus()));
+            cashList.add(entry.getResponse().getStatusText().toString());
+            apiCallsResult.put(entry.getRequest().getUrl().toString(), cashList);
         }
+        System.out.println("apiCallsResult");
+        System.out.println(apiCallsResult);
         return apiCallsResult;
     }
-    public boolean checkCodeInReqest(String codeResponse, List<String> totalRequest) {
-        return totalRequest.contains(codeResponse);
+
+    public boolean checkCodeInReqest(String codeResponse, Map<String, List<String>> totalRequest) {
+        for(Map.Entry<String, List<String>> codeRegest : totalRequest.entrySet()) {
+            if(codeRegest.getValue().contains(codeResponse)){
+                return true;
+            }
+        };
+        return false;
     }
 }
 

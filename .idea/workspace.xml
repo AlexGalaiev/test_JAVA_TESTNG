@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34a993d8-cfa3-4f10-b470-cc5f7b5bf38a" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/functions/ApiMethos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/functions/ApiCalls.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/functions/json.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/functions/apicall.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/LinksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/LinksPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/base/BaseTestApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/base/BaseTestApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LinksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LinksTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/WebTablesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/WebTablesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +64,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.LinksTest.codeApiTestNoContentLink">
+  <component name="RunManager" selected="TestNG.LinksTest.codeApiTestCreatedLink">
     <configuration name="ApiMethos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.functions.ApiMethos" />
       <module name="test_JAVA_TESTNG" />
@@ -169,8 +163,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LinksTest.codeApiTestNoContentLink" />
         <item itemvalue="TestNG.LinksTest.codeApiTestCreatedLink" />
+        <item itemvalue="TestNG.LinksTest.codeApiTestNoContentLink" />
         <item itemvalue="TestNG.LinksTest.codeApiTest" />
         <item itemvalue="Application.ApiMethos" />
         <item itemvalue="TestNG.WebTablesTest.addBtnTest" />
@@ -242,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696433999341</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1">
+      <option name="closed" value="true" />
+      <created>1696598580419</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696598580419</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
