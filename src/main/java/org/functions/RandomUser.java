@@ -15,12 +15,31 @@ public class RandomUser {
 
     public Map<String, String> generateRandomPerson(){
         Map<String, String> randomPerson = new HashMap<String, String>();
-        randomPerson.put("firstName", faker.name().firstName());
-        randomPerson.put("lastName", faker.name().lastName());
-        randomPerson.put("userEmail", faker.name().firstName().toString()+faker.name().lastName().toString()+"@i.com");
-        randomPerson.put("age", String.valueOf(random.nextInt(90)));
-        randomPerson.put("salary", String.valueOf(random.nextInt(10000)));
-        randomPerson.put("department", String.valueOf(faker.funnyName().name()));
+        randomPerson.put("firstName", getFakeName());
+        randomPerson.put("lastName", getFakeLastName());
+        randomPerson.put("userEmail", getFakeUsermail());
+        randomPerson.put("age", getFakeAge());
+        randomPerson.put("salary", getFakeSalary());
+        randomPerson.put("department", getFakeDepartment());
         return randomPerson;
+    }
+
+    private String getFakeName(){
+        return faker.name().firstName();
+    }
+    private String getFakeLastName(){
+        return faker.name().lastName();
+    }
+    private String getFakeUsermail(){
+        return faker.name().firstName().toString()+faker.name().lastName().toString()+"@i.com";
+    }
+    private String getFakeAge(){
+        return String.valueOf(random.nextInt(90));
+    }
+    private String getFakeSalary(){
+        return String.valueOf(random.nextInt(10000));
+    }
+    private String getFakeDepartment(){
+        return String.valueOf(faker.funnyName().name());
     }
 }

@@ -29,15 +29,6 @@ public class LinksPage extends BasePage {
     private WebElement simpleLink;
     @FindBy(css = "#dynamicLink")
     private WebElement dynamiklink;
-    public List<String> locators = Arrays.asList(
-            "createdLinkLocator",
-            "noContentApiLink",
-            "moveApiLink",
-            "badRequest",
-            "forbidden",
-            "notFound"
-            );
-
     public String createdLinkLocator = "#created";
     public String noContentApiLink = "#no-content";
     public String moveApiLink = "#moved";
@@ -54,28 +45,28 @@ public class LinksPage extends BasePage {
         harreaded.writeTo(new File("src/main/java/org/har/file.har"));
         HarReader harReader = new HarReader();
         de.sstoehr.harreader.model.Har har=  harReader.readFromFile(new File("src/main/java/org/har/file.har"), HarReaderMode.LAX);
-
         Map<String,List<String>> apiCallsResult = new HashMap<>();
-
-
         for(de.sstoehr.harreader.model.HarEntry entry: har.getLog().getEntries()){
             List<String> cashList = new ArrayList<>();
             cashList.add(String.valueOf(entry.getResponse().getStatus()));
             cashList.add(entry.getResponse().getStatusText().toString());
             apiCallsResult.put(entry.getRequest().getUrl().toString(), cashList);
         }
-        System.out.println("apiCallsResult");
-        System.out.println(apiCallsResult);
         return apiCallsResult;
     }
 
     public boolean checkCodeInReqest(String codeResponse, Map<String, List<String>> totalRequest) {
         for(Map.Entry<String, List<String>> codeRegest : totalRequest.entrySet()) {
-            if(codeRegest.getValue().contains(codeResponse)){
-                return true;
+            if (codeRegest.getKey().contains("https://demoqa.com/")) {
+                codeRegest.getValue().contains(codeResponse); {
+                    System.out.println(codeRegest);
+                    return true;
+                }
             }
-        };
+        }
         return false;
-    }
+    };
+
 }
+
 
