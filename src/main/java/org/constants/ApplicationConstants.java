@@ -1,5 +1,7 @@
 package org.constants;
 
+import java.io.File;
+
 public class ApplicationConstants {
     //url
     public static final String APP_URL = "https://demoqa.com/";
@@ -9,6 +11,12 @@ public class ApplicationConstants {
     public static final String APP_URL_WEBTABLES = APP_URL + "webtables";
 
     public static final String APP_URL_LINKS = APP_URL + "links";
+    public static final String APP_URL_UPLOAD_DOWNLOAD = APP_URL + "upload-download";
+    public static final String APP_URL_CONFIRMATION_FORM = APP_URL + "automation-practice-form";
+    public static final String APP_URL_BROWSER_WINDOWS = APP_URL + "browser-windows";
+    public static final String APP_URL_ALERT_PAGE = APP_URL + "alerts";
+
+    public static final File FILE_DOWNLOAD_FOLDER = new File("src/main/java/org/downloads");
 
     //
     public static final String TEST_DATA = "TEST DATA";

@@ -5,9 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34a993d8-cfa3-4f10-b470-cc5f7b5bf38a" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/functions/fileToDownload.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/AddRandomUserFormPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/AlertPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/BrowserWindowsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/CreationFormPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/UploadDownloadFilePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/BrowserWindowsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ConfirmationFormTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/UploadDownloadTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/functions/RandomUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/functions/RandomUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/functions/ApiMethos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/ApiMethos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/functions/RandomUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/LinksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/LinksPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/RadioBtnPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/RadioBtnPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/WebTablePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/WebTablePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/webdriver/WebDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/webdriver/WebDriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/webdriver/WebDriverType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/webdriver/WebDriverType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LinksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LinksTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +82,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.LinksTest.codeApiTestMoveBadRequest">
+  <component name="RunManager" selected="TestNG.AlertTest.alertPageWithMSGField">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -76,7 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinksTest.codeApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AlertTest.alertPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test_JAVA_TESTNG" />
       <extension name="coverage">
         <pattern>
@@ -85,8 +103,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LinksTest" />
-      <option name="METHOD_NAME" value="codeApiTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.AlertTest" />
+      <option name="METHOD_NAME" value="alertPageTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -94,7 +112,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinksTest.codeApiTestCreatedLink" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AlertTest.alertPageWith2Btns" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test_JAVA_TESTNG" />
       <extension name="coverage">
         <pattern>
@@ -103,8 +121,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LinksTest" />
-      <option name="METHOD_NAME" value="codeApiTestCreatedLink" />
+      <option name="MAIN_CLASS_NAME" value="tests.AlertTest" />
+      <option name="METHOD_NAME" value="alertPageWith2Btns" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -112,7 +130,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinksTest.codeApiTestMoveApiLink" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AlertTest.alertPageWithDelayTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test_JAVA_TESTNG" />
       <extension name="coverage">
         <pattern>
@@ -121,8 +139,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LinksTest" />
-      <option name="METHOD_NAME" value="codeApiTestMoveApiLink" />
+      <option name="MAIN_CLASS_NAME" value="tests.AlertTest" />
+      <option name="METHOD_NAME" value="alertPageWithDelayTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -130,7 +148,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinksTest.codeApiTestMoveBadRequest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AlertTest.alertPageWithMSGField" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test_JAVA_TESTNG" />
       <extension name="coverage">
         <pattern>
@@ -139,8 +157,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LinksTest" />
-      <option name="METHOD_NAME" value="codeApiTestMoveBadRequest" />
+      <option name="MAIN_CLASS_NAME" value="tests.AlertTest" />
+      <option name="METHOD_NAME" value="alertPageWithMSGField" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -148,7 +166,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinksTest.codeApiTestNoContentLink" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="BrowserWindowsTest.browserWindowsNewExternalWindowWithTextTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test_JAVA_TESTNG" />
       <extension name="coverage">
         <pattern>
@@ -157,8 +175,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LinksTest" />
-      <option name="METHOD_NAME" value="codeApiTestNoContentLink" />
+      <option name="MAIN_CLASS_NAME" value="tests.BrowserWindowsTest" />
+      <option name="METHOD_NAME" value="browserWindowsNewExternalWindowWithTextTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -168,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LinksTest.codeApiTestMoveBadRequest" />
-        <item itemvalue="TestNG.LinksTest.codeApiTestMoveApiLink" />
-        <item itemvalue="TestNG.LinksTest.codeApiTestNoContentLink" />
-        <item itemvalue="TestNG.LinksTest.codeApiTestCreatedLink" />
-        <item itemvalue="TestNG.LinksTest.codeApiTest" />
+        <item itemvalue="TestNG.AlertTest.alertPageWithMSGField" />
+        <item itemvalue="TestNG.AlertTest.alertPageWith2Btns" />
+        <item itemvalue="TestNG.AlertTest.alertPageWithDelayTest" />
+        <item itemvalue="TestNG.AlertTest.alertPageTest" />
+        <item itemvalue="TestNG.BrowserWindowsTest.browserWindowsNewExternalWindowWithTextTest" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696781836597</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="1">
+      <option name="closed" value="true" />
+      <created>1696855959442</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696855959442</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BasePage {
-    public WebDriver driver;
+    protected WebDriver driver;
 
     public BasePage(WebDriver driver){
         this.driver = driver;
@@ -26,9 +26,13 @@ public class BasePage {
         return listOfStrings;
     }
 
-    protected void waitElement(By elementLocatorToWait) {
+    protected void waitElement(WebElement webElement) {
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(elementLocatorToWait));
+        webDriverWait.until(ExpectedConditions.visibilityOf(webElement));
+    }
+    protected void waitAlert(){
+        WebDriverWait webdriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        webdriverWait.until(ExpectedConditions.alertIsPresent());
     }
     protected void sendKeysElement(String locator, String text){
         driver.findElement(By.cssSelector(locator)).clear();

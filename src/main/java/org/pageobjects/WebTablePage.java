@@ -1,10 +1,7 @@
 package org.pageobjects;
 
-import net.datafaker.Faker;
-import net.datafaker.providers.base.Bool;
 import org.constants.ApplicationConstants;
 import org.constants.ApplicationLocators;
-import org.functions.RandomUser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Sleeper;
 
 import java.util.*;
 
@@ -57,14 +53,7 @@ public class WebTablePage extends BasePage{
         }
     }
     private void fillRegistrationForm() {
-        waitElement(RegistrationForm);
-        RandomUser user = new RandomUser();
-        for(Map.Entry<String, String> mapElement : user.generateRandomPerson().entrySet()) {
-            String key = mapElement.getKey();
-            String value = mapElement.getValue();
-            sendKeysElement("#"+key, value);
-        }
-        clickElementByCSS(ApplicationLocators.REG_FORM_SUBMIT);
+        new AddRandomUserFormPage(driver).generateRandomPersonShort();
     }
     public boolean сheckElementInWebTable(String elementToSearch){
         List<WebElement> tableListOfdata = webTableFields.findElements(By.cssSelector(".rt-td"));
@@ -87,7 +76,6 @@ public class WebTablePage extends BasePage{
     public WebTablePage createUserInBase(Integer numberOfUsers) {
         for(int i=1; i<=numberOfUsers; i++) {
             clickElementByCSS(ApplicationLocators.ADD_BTN);
-            waitElement(RegistrationForm);
             fillRegistrationForm();
         }
         return this;
@@ -95,14 +83,13 @@ public class WebTablePage extends BasePage{
 
     public WebTablePage closeExistFields() {
         clickGroupOfElements(deleteFiledBtns);
-        waitElement(noDataText);
         return this;
     }
     public WebTablePage editEmailFieldInWebTable() {
         singleEditBtn.click();
         clearElementField(ApplicationLocators.REG_FORM_EMAIL);
         sendKeysElement(ApplicationLocators.REG_FORM_EMAIL, ApplicationConstants.TEST_EMAIL);
-        clickElementByCSS(ApplicationLocators.REG_FORM_SUBMIT);
+        clickElementByCSS("#submit");
         return this;
     }
     public String getUserCredentialsFromWebList(Integer index){

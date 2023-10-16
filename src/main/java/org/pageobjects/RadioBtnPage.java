@@ -18,7 +18,8 @@ public class RadioBtnPage extends BasePage{
     private WebElement noRadioBtn;
     @FindBy(css = ".text-success")
     public WebElement successMSG;
-    By textMsg = By.cssSelector(".mt-3");
+    @FindBy(css = ".mt-3")
+    private WebElement textMsg;
     public RadioBtnPage clickRadioBtnYes() {
         yesRadioBtn.click();
         return new RadioBtnPage(driver);
