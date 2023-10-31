@@ -5,27 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34a993d8-cfa3-4f10-b470-cc5f7b5bf38a" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/functions/fileToDownload.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/AddRandomUserFormPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/AlertPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/BrowserWindowsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/CreationFormPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/UploadDownloadFilePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/BrowserWindowsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ConfirmationFormTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/UploadDownloadTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/constants/ApplicationLocators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/functions/ApiMethos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/ApiMethos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/functions/RandomUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/LinksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/LinksPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/RadioBtnPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/RadioBtnPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/pageobjects/WebTablePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/pageobjects/WebTablePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/webdriver/WebDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/webdriver/WebDriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/webdriver/WebDriverType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/webdriver/WebDriverType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LinksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LinksTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,19 +50,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/oleksandrg/IdeaProjects/test_JAVA_TESTNG",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
-  <component name="RunManager" selected="TestNG.AlertTest.alertPageWithMSGField">
+}]]></component>
+  <component name="RunManager" selected="TestNG.AlertTest.alertPageWith2Btns">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,24 +71,6 @@
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AlertTest.alertPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="test_JAVA_TESTNG" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AlertTest" />
-      <option name="METHOD_NAME" value="alertPageTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,7 +111,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlertTest.alertPageWithMSGField" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckBoxTest.checkboxTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test_JAVA_TESTNG" />
       <extension name="coverage">
         <pattern>
@@ -157,8 +120,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AlertTest" />
-      <option name="METHOD_NAME" value="alertPageWithMSGField" />
+      <option name="MAIN_CLASS_NAME" value="tests.CheckBoxTest" />
+      <option name="METHOD_NAME" value="checkboxTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -166,7 +129,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BrowserWindowsTest.browserWindowsNewExternalWindowWithTextTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ConfirmationFormTest.confirmationFormTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test_JAVA_TESTNG" />
       <extension name="coverage">
         <pattern>
@@ -175,8 +138,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BrowserWindowsTest" />
-      <option name="METHOD_NAME" value="browserWindowsNewExternalWindowWithTextTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ConfirmationFormTest" />
+      <option name="METHOD_NAME" value="confirmationFormTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploadDownloadTest.uploadBtnTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="test_JAVA_TESTNG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UploadDownloadTest" />
+      <option name="METHOD_NAME" value="uploadBtnTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -186,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AlertTest.alertPageWithMSGField" />
         <item itemvalue="TestNG.AlertTest.alertPageWith2Btns" />
         <item itemvalue="TestNG.AlertTest.alertPageWithDelayTest" />
-        <item itemvalue="TestNG.AlertTest.alertPageTest" />
-        <item itemvalue="TestNG.BrowserWindowsTest.browserWindowsNewExternalWindowWithTextTest" />
+        <item itemvalue="TestNG.CheckBoxTest.checkboxTest" />
+        <item itemvalue="TestNG.ConfirmationFormTest.confirmationFormTest" />
+        <item itemvalue="TestNG.UploadDownloadTest.uploadBtnTest" />
       </list>
     </recent_temporary>
   </component>
@@ -283,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696855959442</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="1">
+      <option name="closed" value="true" />
+      <created>1697453225589</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1697453225589</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -5,13 +5,15 @@ import org.base.BaseTestApi;
 import org.constants.ApplicationConstants;
 import org.pageobjects.ApiMethos;
 import org.pageobjects.LinksPage;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
+
+import static org.testng.Assert.*;
+import static org.testng.Assert.assertTrue;
 
 public class LinksTest extends BaseTestApi{
     private String JSONfile = "src/main/java/org/functions/apicall.json";
@@ -28,55 +30,55 @@ public class LinksTest extends BaseTestApi{
     @Test
     public void codeApiTestCreatedLink() throws IOException, HarReaderException {
         LinksPage linkPage = new LinksPage(driver);
-        Assert.assertTrue(linkPage.checkCodeInReqest(
+        assertTrue(linkPage.checkCodeInReqest(
                 new ApiMethos().getExpectedListOfResponse(linkPage.createdLinkLocator, JSONfile).get(0),
                 linkPage.getExpectedApiCalls(bmp, linkPage.createdLinkLocator)));
-        Assert.assertEquals(linkPage.linkResponse.getText(),
+        assertEquals(linkPage.linkResponse.getText(),
                 new ApiMethos().getSuccessMSGAfterRedirect(linkPage.createdLinkLocator, JSONfile));
     }
     @Test
     public void codeApiTestNoContentLink() throws IOException, HarReaderException {
         LinksPage linkPage = new LinksPage(driver);
-        Assert.assertTrue(linkPage.checkCodeInReqest(
+        assertTrue(linkPage.checkCodeInReqest(
                 new ApiMethos().getExpectedListOfResponse(linkPage.noContentApiLink, JSONfile).get(0),
                 linkPage.getExpectedApiCalls(bmp, linkPage.noContentApiLink)));
-        Assert.assertEquals(linkPage.linkResponse.getText(),
+        assertEquals(linkPage.linkResponse.getText(),
                 new ApiMethos().getSuccessMSGAfterRedirect(linkPage.noContentApiLink, JSONfile));
     }
     @Test
     public void codeApiTestMoveApiLink() throws IOException, HarReaderException {
         LinksPage linkPage = new LinksPage(driver);
-        Assert.assertTrue(linkPage.checkCodeInReqest(
+        assertTrue(linkPage.checkCodeInReqest(
                 new ApiMethos().getExpectedListOfResponse(linkPage.moveApiLink, JSONfile).get(0),
                 linkPage.getExpectedApiCalls(bmp, linkPage.moveApiLink)));
-        Assert.assertEquals(linkPage.linkResponse.getText(),
+        assertEquals(linkPage.linkResponse.getText(),
                 new ApiMethos().getSuccessMSGAfterRedirect(linkPage.moveApiLink, JSONfile));
     }
     @Test
     public void codeApiTestMoveBadRequest() throws IOException, HarReaderException {
         LinksPage linkPage = new LinksPage(driver);
-        Assert.assertTrue(linkPage.checkCodeInReqest(
+        assertTrue(linkPage.checkCodeInReqest(
                 new ApiMethos().getExpectedListOfResponse(linkPage.badRequest, JSONfile).get(0),
                 linkPage.getExpectedApiCalls(bmp, linkPage.badRequest)));
-        Assert.assertEquals(linkPage.linkResponse.getText(),
+        assertEquals(linkPage.linkResponse.getText(),
                 new ApiMethos().getSuccessMSGAfterRedirect(linkPage.badRequest, JSONfile));
     }
     @Test
-    public void codeApiTestMoveForbiden() throws IOException, HarReaderException {
+    public void codeApiTestMoveForbidden() throws IOException, HarReaderException {
         LinksPage linkPage = new LinksPage(driver);
-        Assert.assertTrue(linkPage.checkCodeInReqest(
+        assertTrue(linkPage.checkCodeInReqest(
                 new ApiMethos().getExpectedListOfResponse(linkPage.forbidden, JSONfile).get(0),
                 linkPage.getExpectedApiCalls(bmp, linkPage.forbidden)));
-        Assert.assertEquals(linkPage.linkResponse.getText(),
+        assertEquals(linkPage.linkResponse.getText(),
                 new ApiMethos().getSuccessMSGAfterRedirect(linkPage.forbidden, JSONfile));
     }
     @Test
     public void codeApiTestNotFound() throws IOException, HarReaderException {
         LinksPage linkPage = new LinksPage(driver);
-        Assert.assertTrue(linkPage.checkCodeInReqest(
+        assertTrue(linkPage.checkCodeInReqest(
                 new ApiMethos().getExpectedListOfResponse(linkPage.notFound, JSONfile).get(0),
                 linkPage.getExpectedApiCalls(bmp, linkPage.notFound)));
-        Assert.assertEquals(linkPage.linkResponse.getText(),
+        assertEquals(linkPage.linkResponse.getText(),
                 new ApiMethos().getSuccessMSGAfterRedirect(linkPage.notFound, JSONfile));
     }
 
